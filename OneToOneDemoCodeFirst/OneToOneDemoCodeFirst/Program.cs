@@ -9,8 +9,8 @@ namespace OneToOneDemoCodeFirst
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<StudentEventContext>(options => options.UseSqlServer(
-                builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<AuthorContext>(options => options.UseSqlServer(
+               builder.Configuration.GetConnectionString("DefaultConnection")));
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -33,7 +33,7 @@ namespace OneToOneDemoCodeFirst
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Students}/{action=Index}/{id?}");
+                pattern: "{controller=AuthorBios}/{action=Index}/{id?}");
 
             app.Run();
         }

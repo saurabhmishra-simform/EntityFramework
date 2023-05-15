@@ -16,24 +16,44 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\saurabh\Desktop\Saurabh\EntityFramework\OneToOneDemoCodeFirst\OneToOneDemoCodeFirst
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Events/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXENyZWF0ZS5jc2h0bWw=
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/AuthorBios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yQmlvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Events/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXERlbGV0ZS5jc2h0bWw=
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/AuthorBios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yQmlvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Events/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXERldGFpbHMuY3NodG1s
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/AuthorBios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yQmlvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Events/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXEVkaXQuY3NodG1s
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/AuthorBios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yQmlvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Events/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRzXEluZGV4LmNzaHRtbA==
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/AuthorBios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yQmlvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Authors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Authors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Authors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Authors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Authors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Home/Index.cshtml]
@@ -50,26 +70,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Students/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Students/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Students/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Students/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/Students/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/saurabh/Desktop/Saurabh/EntityFramework/OneToOneDemoCodeFirst/OneToOneDemoCodeFirst/Views/_ViewImports.cshtml]
