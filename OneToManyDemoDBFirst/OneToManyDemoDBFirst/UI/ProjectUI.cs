@@ -19,25 +19,39 @@ namespace OneToManyDemoDBFirst.UI
                 Console.WriteLine("\t\t3.Update");
                 Console.WriteLine("\t\t4.Delete");
                 Console.WriteLine("\t\t0.Exit");
+                UserData:
                 Console.Write("Select option:");
-                option = Convert.ToInt32(Console.ReadLine());
-                switch (option)
+                try
                 {
-                    case 1:
-                        CodeWithProject.InsertProjectDetails();
-                        break;
-                    case 2:
-                        CodeWithProject.ShowProjectDetails();
-                        break;
-                    case 3:
-                        CodeWithProject.UpdateProjectDetails();
-                        break;
-                    case 4:
-                        CodeWithProject.DeleteProjectDetails();
-                        break;
-                    case 0:
-                        MainClass.MainUIClass();
-                        break;
+                    option = Convert.ToInt32(Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            CodeWithProject.InsertProjectDetails();
+                            break;
+                        case 2:
+                            CodeWithProject.ShowProjectDetails();
+                            break;
+                        case 3:
+                            CodeWithProject.UpdateProjectDetails();
+                            break;
+                        case 4:
+                            CodeWithProject.DeleteProjectDetails();
+                            break;
+                        case 0:
+                            MainClass.MainUIClass();
+                            break;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid input format!");
+                    goto UserData;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Some exception found!");
+                    goto UserData;
                 }
             }
         }

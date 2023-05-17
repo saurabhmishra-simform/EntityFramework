@@ -1,4 +1,5 @@
 ﻿using ConsoleTables;
+using OneToManyDemoDBFirst.Delegates;
 using OneToManyDemoDBFirst.UI;
 using OneToManyDemoDBFirst.UserInputFiles;
 using System;
@@ -12,6 +13,7 @@ namespace OneToManyDemoDBFirst
     public class CodeWithStudent
     {
         public static int Id;
+        static TypeConvertDelegate<int> IntegerConvert = new TypeConvertDelegate<int>(ConvertValue.ConvertInt);
         public static void InsertStudentDetails()
         {
             using(StudentProjectEntities context = new StudentProjectEntities())
@@ -21,7 +23,7 @@ namespace OneToManyDemoDBFirst
                     StudentName = UserInput.GetUserInput("Student name:"),
                     StudentAddress = UserInput.GetUserInput("Student address:"),
                     Email = UserInput.GetUserInput("Student email:"),
-                    ProjectId = Convert.ToInt32(UserInput.GetUserInput("Project Id:")),
+                    ProjectId = IntegerConvert(UserInput.GetUserInput("Project Id:")),
                 };
                 context.Students.Add(student);
                 context.SaveChanges();
@@ -43,21 +45,22 @@ namespace OneToManyDemoDBFirst
         }
         public static void UpdateStudentDetails()
         {
-            Id = Convert.ToInt32(UserInput.GetUserInput("Enter project Id:"));
+            Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
             using (StudentProjectEntities context = new StudentProjectEntities())
             {
                 var student = context.Students.FirstOrDefault(stud => stud.StudentId == Id);
                 student.StudentName = UserInput.GetUserInput("Student name:");
                 student.StudentAddress = UserInput.GetUserInput("Student address:");
                 student.Email = UserInput.GetUserInput("Student email:");
-                student.ProjectId = Convert.ToInt32(UserInput.GetUserInput("Project Id:"));
+                student.ProjectId = IntegerConvert(UserInput.GetUserInput("Project Id:"));
                 context.SaveChanges();
                 ShowStudentDetails();
             }
         }
         public static void DeleteStudentDetails()
+
         {
-            Id = Convert.ToInt32(UserInput.GetUserInput("Enter project Id:"));
+            Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
             using (StudentProjectEntities context = new StudentProjectEntities())
             {
                 var student = context.Students.FirstOrDefault(stud => stud.StudentId == Id);

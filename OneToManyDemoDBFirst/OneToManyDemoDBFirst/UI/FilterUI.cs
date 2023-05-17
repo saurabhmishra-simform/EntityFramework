@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace OneToManyDemoDBFirst.UI
 {
-    public class MainClass
+    public class FilterUI
     {
-        public static void MainUIClass()
+        public static void FilterUIMenu()
         {
             int option;
             while (true)
             {
-                Console.WriteLine("\n\t\t************Main Menu************");
-                Console.WriteLine("\t\t1.Operation on Project");
-                Console.WriteLine("\t\t2.Operation on Student");
-                Console.WriteLine("\t\t3.Operation on Filter");
+                Console.WriteLine("\n\t\t************Filter Menu************");
+                Console.WriteLine("\t\t1.Find");
+                Console.WriteLine("\t\t2.GroupBy");
+                Console.WriteLine("\t\t3.OrderBy");
+                Console.WriteLine("\t\t4.JoinQuery");
+                Console.WriteLine("\t\t5.GroupJoinQuery");
+                Console.WriteLine("\t\t6.CountProjectWise");
                 Console.WriteLine("\t\t0.Exit");
                 UserData:
                 Console.Write("Select option:");
@@ -26,16 +29,25 @@ namespace OneToManyDemoDBFirst.UI
                     switch (option)
                     {
                         case 1:
-                            ProjectUI.ProjectUIMenu();
+                            FilterInStudent.FindStudentName();
                             break;
                         case 2:
-                            StudentUI.StudentUIMenu();
+                            FilterInStudent.GroupProjectName();
                             break;
                         case 3:
-                            FilterUI.FilterUIMenu();
+                            FilterInStudent.OrderByProjectId();
+                            break;
+                        case 4:
+                            FilterInStudent.JoinQuery();
+                            break;
+                        case 5:
+                            FilterInStudent.GroupJoinQuery();
+                            break;
+                        case 6:
+                            FilterInStudent.CountProjectWise();
                             break;
                         case 0:
-                            Environment.Exit(0);
+                            MainClass.MainUIClass();
                             break;
                     }
                 }

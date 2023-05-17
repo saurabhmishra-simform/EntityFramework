@@ -1,4 +1,5 @@
 ﻿using ConsoleTables;
+using OneToManyDemoDBFirst.Delegates;
 using OneToManyDemoDBFirst.UserInputFiles;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ namespace OneToManyDemoDBFirst
     public class CodeWithProject 
     {
         public static int Id;
+        static TypeConvertDelegate<DateTime> DateTimeConvert = new TypeConvertDelegate<DateTime>(ConvertValue.ConvertDateTime);
+        static TypeConvertDelegate<int> IntegerConvert = new TypeConvertDelegate<int>(ConvertValue.ConvertInt);
         public static void InsertProjectDetails()
         {
             using(StudentProjectEntities context = new StudentProjectEntities())
@@ -19,8 +22,8 @@ namespace OneToManyDemoDBFirst
                 var project = new Project()
                 {
                     ProjectName = UserInput.GetUserInput("Project name:"),
-                    StartDate = Convert.ToDateTime(UserInput.GetUserInput("Project start date:")),
-                    EndDate = Convert.ToDateTime(UserInput.GetUserInput("Project end date:")),
+                    StartDate = DateTimeConvert(UserInput.GetUserInput("Project start date:")),
+                    EndDate = DateTimeConvert(UserInput.GetUserInput("Project end date:")),
                 };
                 context.Projects.Add(project);
                 context.SaveChanges();
@@ -42,20 +45,20 @@ namespace OneToManyDemoDBFirst
         }
         public static void UpdateProjectDetails()
         {
-            Id = Convert.ToInt32(UserInput.GetUserInput("Enter project Id:"));
+            Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
             using(StudentProjectEntities context = new StudentProjectEntities())
             {
                 var project = context.Projects.FirstOrDefault(pro => pro.ProjectId == Id);
                 project.ProjectName = UserInput.GetUserInput("Project name:");
-                project.StartDate = Convert.ToDateTime(UserInput.GetUserInput("Project start date:"));
-                project.EndDate = Convert.ToDateTime(UserInput.GetUserInput("Project end date:"));
+                project.StartDate = DateTimeConvert(UserInput.GetUserInput("Project start date:"));
+                project.EndDate = DateTimeConvert(UserInput.GetUserInput("Project end date:"));
                 context.SaveChanges();
                 ShowProjectDetails();
             }
         }
         public static void DeleteProjectDetails()
         {
-            Id = Convert.ToInt32(UserInput.GetUserInput("Enter project Id:"));
+            Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
             using (StudentProjectEntities context = new StudentProjectEntities())
             {
                 var project = context.Projects.FirstOrDefault(pro => pro.ProjectId == Id);
