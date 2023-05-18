@@ -11,9 +11,10 @@ namespace OneToManyDemoDBFirst
 {
     public class FilterInStudent
     {
+        static readonly StudentProjectEntities context = new StudentProjectEntities();
         public static void FindStudentName()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var student = context.Students.Find(1);
                 Console.WriteLine(student.StudentName);
@@ -21,7 +22,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void GroupProjectName()
         {
-            using (StudentProjectEntities context = new StudentProjectEntities())
+            using (context)
             {
                 //var students = from s in context.Students
                 //               group s by s.ProjectId into StudentByProject
@@ -42,7 +43,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void OrderByProjectId()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 //var students = context.Students.OrderBy(x => x.ProjectId);
                 var students = from student in context.Students
@@ -58,7 +59,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void JoinQuery()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var studentProject = context.Students.Join(context.Projects,
                                                            stud => stud.ProjectId,
@@ -79,7 +80,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void GroupJoinQuery()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var studentProject = context.Students.GroupJoin(context.Projects,
                                                                 stud => stud.ProjectId,
@@ -103,7 +104,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void CountProjectWise()
         {
-            using (StudentProjectEntities context = new StudentProjectEntities())
+            using (context)
             {
                 var query = context.Students.Join(context.Projects,
                                                    stud => stud.ProjectId,

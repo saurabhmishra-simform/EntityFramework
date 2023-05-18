@@ -12,12 +12,13 @@ namespace OneToManyDemoDBFirst
 {
     public class CodeWithProject 
     {
+        static readonly StudentProjectEntities context = new StudentProjectEntities();
         public static int Id;
         static TypeConvertDelegate<DateTime> DateTimeConvert = new TypeConvertDelegate<DateTime>(ConvertValue.ConvertDateTime);
         static TypeConvertDelegate<int> IntegerConvert = new TypeConvertDelegate<int>(ConvertValue.ConvertInt);
         public static void InsertProjectDetails()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var project = new Project()
                 {
@@ -32,7 +33,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void ShowProjectDetails()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var projects = context.Projects.ToList();
                 var consoleTable = new ConsoleTable("ProjectId", "ProjectName", "StartDate", "EndDate");
@@ -46,7 +47,7 @@ namespace OneToManyDemoDBFirst
         public static void UpdateProjectDetails()
         {
             Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var project = context.Projects.FirstOrDefault(pro => pro.ProjectId == Id);
                 project.ProjectName = UserInput.GetUserInput("Project name:");
@@ -59,7 +60,7 @@ namespace OneToManyDemoDBFirst
         public static void DeleteProjectDetails()
         {
             Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
-            using (StudentProjectEntities context = new StudentProjectEntities())
+            using (context)
             {
                 var project = context.Projects.FirstOrDefault(pro => pro.ProjectId == Id);
                 context.Projects.Remove(project);

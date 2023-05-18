@@ -12,11 +12,12 @@ namespace OneToManyDemoDBFirst
 {
     public class CodeWithStudent
     {
+        static readonly StudentProjectEntities context = new StudentProjectEntities();
         public static int Id;
         static TypeConvertDelegate<int> IntegerConvert = new TypeConvertDelegate<int>(ConvertValue.ConvertInt);
         public static void InsertStudentDetails()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var student = new Student()
                 {
@@ -32,7 +33,7 @@ namespace OneToManyDemoDBFirst
         }
         public static void ShowStudentDetails()
         {
-            using(StudentProjectEntities context = new StudentProjectEntities())
+            using(context)
             {
                 var students = context.Students.ToList();
                 var consoleTable = new ConsoleTable("StudentID", "StudentName", "StudentAddress", "StudentEmail", "ProjectID");
@@ -46,7 +47,7 @@ namespace OneToManyDemoDBFirst
         public static void UpdateStudentDetails()
         {
             Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
-            using (StudentProjectEntities context = new StudentProjectEntities())
+            using (context)
             {
                 var student = context.Students.FirstOrDefault(stud => stud.StudentId == Id);
                 student.StudentName = UserInput.GetUserInput("Student name:");
@@ -61,7 +62,7 @@ namespace OneToManyDemoDBFirst
 
         {
             Id = IntegerConvert(UserInput.GetUserInput("Enter project Id:"));
-            using (StudentProjectEntities context = new StudentProjectEntities())
+            using (context)
             {
                 var student = context.Students.FirstOrDefault(stud => stud.StudentId == Id);
                 context.Students.Remove(student);
